@@ -3,18 +3,18 @@ const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 import { useTheme } from '@mui/material/styles';
 import { Grid, Stack, Typography, Avatar } from '@mui/material';
 import { IconArrowUpLeft } from '@tabler/icons-react';
-import DashboardCard from '../../components/shared/DashboardCard';
+import DashboardCard from '../shared/DashboardCard';
 import { Gauge, gaugeClasses } from '@mui/x-charts';
 
-const YearlyBreakup = () => {
+const YearlyProblemSolvingTarget = () => {
   // chart color
   const theme = useTheme();
   const primary = theme.palette.primary.main;
   const primaryLight = '#ecf2ff';
-  const successlight = theme.palette.success.light;
+  const successLight = theme.palette.success.light;
 
   // chart
-  const optionscolumnchart: any = {
+  const optionsColumnChart: any = {
     chart: {
       type: 'donut',
       fontFamily: "'Plus Jakarta Sans', sans-serif;",
@@ -59,7 +59,7 @@ const YearlyBreakup = () => {
       },
     ],
   };
-  const seriescolumnchart: any = [38, 40, 25];
+  const seriesColumnChart: any = [38, 40, 25];
 
   return (
     <DashboardCard title="Yearly Problem-Solving Target">
@@ -70,7 +70,7 @@ const YearlyBreakup = () => {
             $36,358
           </Typography>
           <Stack direction="row" spacing={1} mt={1} alignItems="center">
-            <Avatar sx={{ bgcolor: successlight, width: 27, height: 27 }}>
+            <Avatar sx={{ bgcolor: successLight, width: 27, height: 27 }}>
               <IconArrowUpLeft width={20} color="#39B69A" />
             </Avatar>
             <Typography variant="subtitle2" fontWeight="600">
@@ -136,4 +136,4 @@ const YearlyBreakup = () => {
   );
 };
 
-export default YearlyBreakup;
+export default YearlyProblemSolvingTarget;

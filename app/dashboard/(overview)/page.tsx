@@ -9,11 +9,18 @@ import {
   LatestInvoicesSkeleton,
   RevenueChartSkeleton,
 } from '@/app/ui/skeletons';
+import PageContainer from '@/app/ui/components/container/PageContainer';
+import { Box, Grid } from '@mui/material';
+import RecentTransactions from '@/app/ui/components/dashboard/RecentTransactions';
+import ProductPerformance from '@/app/ui/components/dashboard/ProductPerformance';
+import YearlyProblemSolvingTarget from '@/app/ui/components/dashboard/YearlyProblemSolvingTarget';
+import MonthlyEarnings from '@/app/ui/components/dashboard/MonthlyEarnings';
+import SalesOverview from '@/app/ui/components/dashboard/SalesOverview';
 
 export default async function Page() {
   return (
     <main>
-      {/* <PageContainer title="Dashboard" description="this is Dashboard">
+      <PageContainer title="Dashboard" description="this is Dashboard">
       <Box>
         <Grid container spacing={3}>
           <Grid item xs={12} lg={4}>
@@ -25,7 +32,7 @@ export default async function Page() {
           <Grid item xs={12} lg={4}>
             <Grid container spacing={3}>
               <Grid item xs={12}>
-                <YearlyBreakup />
+                <YearlyProblemSolvingTarget />
               </Grid>
               <Grid item xs={12}>
                 <MonthlyEarnings />
@@ -36,7 +43,8 @@ export default async function Page() {
             <SalesOverview />
           </Grid>
         </Grid>
-      </Box> */}
+      </Box>
+      </PageContainer>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>
