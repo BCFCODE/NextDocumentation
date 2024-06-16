@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import { styled, useTheme, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -16,8 +17,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import HomeIcon from '@mui/icons-material/Home';
+import FileCopyIcon from '@mui/icons-material/FileCopy';
+import Groups2Icon from '@mui/icons-material/Groups2';
 
 const drawerWidth = 240;
 
@@ -102,6 +104,12 @@ export default function MiniDrawer() {
     setOpen(false);
   };
 
+  const sideBarTopIcons = [
+    { text: 'Home', Icon: HomeIcon },
+    { text: 'Invoices', Icon: FileCopyIcon },
+    { text: 'Customers', Icon: Groups2Icon },
+  ];
+
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -136,7 +144,7 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {sideBarTopIcons.map(({ text, Icon }, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
@@ -152,7 +160,7 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {<Icon />}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
@@ -177,7 +185,7 @@ export default function MiniDrawer() {
                     justifyContent: 'center',
                   }}
                 >
-                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                  {index % 2 === 0 ? <HomeIcon /> : <FileCopyIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
