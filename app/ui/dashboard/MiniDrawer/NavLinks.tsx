@@ -7,6 +7,7 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import List from '@mui/material/List';
+import Link from 'next/link';
 
 const sideBarTopIcons = [
   { text: 'Home', href: '/dashboard', Icon: HomeIcon },
@@ -21,26 +22,29 @@ interface Props {
 const NavLinks = ({ isOpen }: Props) => {
   return (
     <List>
-      {sideBarTopIcons.map(({ text, Icon }) => (
+      {sideBarTopIcons.map(({ text, Icon, href }) => (
         <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-          <ListItemButton
-            sx={{
-              minHeight: 48,
-              justifyContent: isOpen ? 'initial' : 'center',
-              px: 2.5,
-            }}
-          >
-            <ListItemIcon
+          <Link href={href} passHref>
+            <ListItemButton
+              LinkComponent="a"
               sx={{
-                minWidth: 0,
-                mr: isOpen ? 3 : 'auto',
-                justifyContent: 'center',
+                minHeight: 48,
+                justifyContent: isOpen ? 'initial' : 'center',
+                px: 2.5,
               }}
             >
-              {<Icon />}
-            </ListItemIcon>
-            <ListItemText primary={text} sx={{ opacity: isOpen ? 1 : 0 }} />
-          </ListItemButton>
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: isOpen ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                {<Icon />}
+              </ListItemIcon>
+              <ListItemText primary={text} sx={{ opacity: isOpen ? 1 : 0 }} />
+            </ListItemButton>
+          </Link>
         </ListItem>
       ))}
     </List>
