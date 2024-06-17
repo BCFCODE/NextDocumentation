@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import List from '@mui/material/List';
 import Link from 'next/link';
 import LinkButton from './LinkButton';
+import { usePathname } from 'next/navigation';
 
 const sideBarTopIcons = [
   { text: 'Home', href: '/dashboard', Icon: HomeIcon },
@@ -17,12 +18,20 @@ interface Props {
 }
 
 const NavLinks = ({ isOpen }: Props) => {
+  
+
   return (
     <List>
       {sideBarTopIcons.map(({ text, Icon, href }) => {
-        const linkButtonProps = { isOpen, Icon, text };
+        const linkButtonProps = { isOpen, Icon, text, href };
         return (
-          <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+          <ListItem
+            key={text}
+            disablePadding
+            sx={{
+              display: 'block',
+            }}
+          >
             <Link href={href} passHref>
               <LinkButton {...linkButtonProps} />
             </Link>

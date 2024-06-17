@@ -68,8 +68,8 @@ const LeftSideNav = ({ isOpen, onClose }: Props) => {
       </DrawerHeader>
       <Divider />
       <NavLinks isOpen={isOpen} />
-      <Divider />
-      <NavLinks isOpen={isOpen} />
+      {/* <Divider />
+      <NavLinks isOpen={isOpen} /> */}
     </Drawer>
   );
 };
