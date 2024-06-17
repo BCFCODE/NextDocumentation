@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
@@ -6,7 +8,6 @@ import ListItem from '@mui/material/ListItem';
 import List from '@mui/material/List';
 import Link from 'next/link';
 import LinkButton from './LinkButton';
-import { usePathname } from 'next/navigation';
 
 const sideBarTopIcons = [
   { text: 'Home', href: '/dashboard', Icon: HomeIcon },
