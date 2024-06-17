@@ -7,6 +7,8 @@ import { useTheme } from '@mui/material/styles';
 import DrawerHeader from './common/DrawerHeader';
 import NavLinks from './NavLinks';
 import Drawer from './common/Drawer';
+import LockIcon from '@mui/icons-material/Lock';
+import LinkButton from './LinkButton';
 
 interface Props {
   isOpen: boolean;
@@ -15,6 +17,7 @@ interface Props {
 
 const LeftSideNav = ({ isOpen, onClose }: Props) => {
   const theme = useTheme();
+  const signOutButtonProps = { text: 'Sign Out', Icon: LockIcon, isOpen };
 
   return (
     <Drawer variant="permanent" open={isOpen}>
@@ -30,7 +33,8 @@ const LeftSideNav = ({ isOpen, onClose }: Props) => {
       <Divider />
       <NavLinks isOpen={isOpen} />
       <Divider />
-      {/* <NavLinks isOpen={isOpen} /> */}
+
+      <LinkButton {...signOutButtonProps} />
     </Drawer>
   );
 };

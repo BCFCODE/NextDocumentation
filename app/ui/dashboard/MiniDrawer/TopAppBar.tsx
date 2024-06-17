@@ -4,11 +4,6 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import AppBar from './AppBar';
-
-
-
-
-
 export interface Props {
   isOpen: boolean;
   onOpen: () => void;
@@ -32,7 +27,7 @@ const TopAppBar =({isOpen,onOpen}: Props) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            Bakhshandeh Morteza
           </Typography>
         </Toolbar>
       </AppBar>

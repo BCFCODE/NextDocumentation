@@ -8,7 +8,7 @@ interface Props {
   Icon: ElementType;
   isOpen: boolean;
   text: string;
-  href: string
+  href?: string
 }
 
 const LinkButton = ({ text, isOpen, Icon, href }: Props) => {

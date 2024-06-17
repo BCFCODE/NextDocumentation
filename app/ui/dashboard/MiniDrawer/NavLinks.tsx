@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React from 'react';
 import HomeIcon from '@mui/icons-material/Home';
@@ -18,29 +18,25 @@ interface Props {
   isOpen: boolean;
 }
 
-const NavLinks = ({ isOpen }: Props) => {
-  
-
-  return (
-    <List>
-      {sideBarTopIcons.map(({ text, Icon, href }) => {
-        const linkButtonProps = { isOpen, Icon, text, href };
-        return (
-          <ListItem
-            key={text}
-            disablePadding
-            sx={{
-              display: 'block',
-            }}
-          >
-            <Link href={href} passHref>
-              <LinkButton {...linkButtonProps} />
-            </Link>
-          </ListItem>
-        );
-      })}
-    </List>
-  );
-};
+const NavLinks = ({ isOpen }: Props) => (
+  <List>
+    {sideBarTopIcons.map(({ text, Icon, href }) => {
+      const linkButtonProps = { isOpen, Icon, text, href };
+      return (
+        <ListItem
+          key={text}
+          disablePadding
+          sx={{
+            display: 'block',
+          }}
+        >
+          <Link href={href} passHref>
+            <LinkButton {...linkButtonProps} />
+          </Link>
+        </ListItem>
+      );
+    })}
+  </List>
+);
 
 export default NavLinks;
