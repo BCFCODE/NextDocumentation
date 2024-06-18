@@ -11,7 +11,7 @@ export interface Props {
 
 const TopAppBar = ({ isOpen, onOpen }: Props) => {
   return (
-    <AppBar position="fixed" open={isOpen}>
+    <AppBar color='transparent' position="fixed" open={isOpen}>
       <Toolbar>
         <IconButton
           color="inherit"

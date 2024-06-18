@@ -8,7 +8,7 @@ interface Props {
   Icon: ElementType;
   isOpen: boolean;
   text: string;
-  href?: string
+  href?: string;
 }
 
 const LinkButton = ({ text, isOpen, Icon, href }: Props) => {
@@ -21,7 +21,7 @@ const LinkButton = ({ text, isOpen, Icon, href }: Props) => {
         minHeight: 48,
         justifyContent: isOpen ? 'initial' : 'center',
         px: 2.5,
-        backgroundColor: href === pathname ? 'yellowgreen' : 'initial',
+        backgroundColor: href === pathname ? '#d3d3d3' : 'initial',
       }}
     >
       <ListItemIcon
@@ -29,12 +29,16 @@ const LinkButton = ({ text, isOpen, Icon, href }: Props) => {
           minWidth: 0,
           mr: isOpen ? 3 : 'auto',
           justifyContent: 'center',
-          
         }}
       >
         {<Icon />}
       </ListItemIcon>
-      <ListItemText primary={text} sx={{ opacity: isOpen ? 1 : 0 }} />
+      <ListItemText
+        primary={text}
+        sx={{
+          opacity: isOpen ? 1 : 0,
+        }}
+      />
     </ListItemButton>
   );
 };
