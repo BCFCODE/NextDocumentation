@@ -7,7 +7,7 @@ import Groups2Icon from '@mui/icons-material/Groups2';
 import ListItem from '@mui/material/ListItem';
 import List from '@mui/material/List';
 import Link from 'next/link';
-import LinkButton from './LinkButton';
+import LinkButton from './MiniDrawer/LinkButton';
 
 const sideBarTopIcons = [
   { text: 'Home', href: '/dashboard', Icon: HomeIcon },

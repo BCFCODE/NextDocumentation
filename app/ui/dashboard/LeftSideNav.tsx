@@ -5,7 +5,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useTheme } from '@mui/material/styles';
 import DrawerHeader from './MiniDrawer/common/DrawerHeader';
-import NavLinks from './MiniDrawer/NavLinks';
+import NavLinks from './NavLinks';
 import Drawer from './MiniDrawer/common/Drawer';
 import LockIcon from '@mui/icons-material/Lock';
 import LinkButton from './MiniDrawer/LinkButton';
