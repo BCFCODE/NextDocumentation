@@ -2,9 +2,9 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
-import { TopAppBar } from './TopAppBar';
+import { TopAppBar } from '../AppBar/TopAppBar';
 import { LeftSideNav } from '../LeftSideNav';
-import DrawerHeader from './common/DrawerHeader';
+import DrawerHeader from '../common/DrawerHeader';
 
 export const drawerWidth = 240;
 interface Props {

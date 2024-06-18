@@ -2,11 +2,8 @@ import React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import AppBar from './AppBar';
-import Link from 'next/link';
-import AcmeLogo from '../../acme-logo';
 import TopLeftLogo from './TopLeftLogo';
+import AppBar from './Styles';
 export interface Props {
   isOpen: boolean;
   onOpen: () => void;

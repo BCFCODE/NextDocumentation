@@ -1,7 +1,7 @@
-'use client'
+'use client';
 import { styled } from '@mui/material/styles';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import { drawerWidth } from '.';
+import { drawerWidth } from '../MiniDrawer';
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;

@@ -4,12 +4,12 @@ import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useTheme } from '@mui/material/styles';
-import DrawerHeader from './MiniDrawer/common/DrawerHeader';
+import DrawerHeader from '../common/DrawerHeader';
 import NavLinks from './NavLinks';
-import Drawer from './MiniDrawer/common/Drawer';
+import Drawer from '../common/Drawer';
 import LockIcon from '@mui/icons-material/Lock';
-import LinkButton from './MiniDrawer/LinkButton';
-import TopLeftLogo from './MiniDrawer/TopLeftLogo';
+import LinkButton from './LinkButton';
+import TopLeftLogo from '../AppBar/TopLeftLogo';
 
 interface Props {
   isOpen: boolean;

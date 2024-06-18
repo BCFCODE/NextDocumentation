@@ -1,7 +1,7 @@
-'use client'
+'use client';
 import MuiDrawer from '@mui/material/Drawer';
 import { styled, Theme, CSSObject } from '@mui/material/styles';
-import { drawerWidth } from '..';
+import { drawerWidth } from '../MiniDrawer';
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
@@ -41,4 +41,4 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default Drawer
+export default Drawer;
