@@ -4,35 +4,34 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import AppBar from './AppBar';
+import Link from 'next/link';
+import AcmeLogo from '../../acme-logo';
+import TopLeftLogo from './TopLeftLogo';
 export interface Props {
   isOpen: boolean;
   onOpen: () => void;
 }
 
-const TopAppBar =({isOpen,onOpen}: Props) => {
-
-    return (
-      <AppBar position="fixed" open={isOpen}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={onOpen}
-            edge="start"
-            sx={{
-              marginRight: 5,
-              ...(isOpen && { display: 'none' }),
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Bakhshandeh Morteza
-          </Typography>
-        </Toolbar>
-      </AppBar>
-    );
-  }
-
+const TopAppBar = ({ isOpen, onOpen }: Props) => {
+  return (
+    <AppBar position="fixed" open={isOpen}>
+      <Toolbar>
+        <IconButton
+          color="inherit"
+          aria-label="open drawer"
+          onClick={onOpen}
+          edge="start"
+          sx={{
+            marginRight: 5,
+            ...(isOpen && { display: 'none' }),
+          }}
+        >
+          <MenuIcon />
+        </IconButton>
+        <TopLeftLogo show={!isOpen} />
+      </Toolbar>
+    </AppBar>
+  );
+};
 
 export { TopAppBar };

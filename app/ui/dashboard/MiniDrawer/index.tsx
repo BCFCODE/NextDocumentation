@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
 import { TopAppBar } from './TopAppBar';
-import { LeftSideNav } from './LeftSideNav';
+import { LeftSideNav } from '../LeftSideNav';
 import DrawerHeader from './common/DrawerHeader';
 
 export const drawerWidth = 240;
@@ -24,12 +24,12 @@ export default function MiniDrawer({
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <TopAppBar onOpen={handleDrawerOpen} isOpen={open} />
-      <LeftSideNav  onClose={handleDrawerClose} isOpen={open} />
+      <LeftSideNav onClose={handleDrawerClose} isOpen={open} />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
         {/* <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div> */}
         <Box>{children}</Box>
-        
+
         {/* <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
