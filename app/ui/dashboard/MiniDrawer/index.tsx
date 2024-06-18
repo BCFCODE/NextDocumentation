@@ -8,12 +8,14 @@ import DrawerHeader from './common/DrawerHeader';
 
 export const drawerWidth = 240;
 interface Props {
+  children: React.ReactNode;
   open: boolean;
   handleDrawerOpen: () => void;
   handleDrawerClose: () => void;
 }
 
 export default function MiniDrawer({
+  children,
   handleDrawerClose,
   handleDrawerOpen,
   open,
@@ -22,10 +24,13 @@ export default function MiniDrawer({
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <TopAppBar onOpen={handleDrawerOpen} isOpen={open} />
-      <LeftSideNav onClose={handleDrawerClose} isOpen={open} />
+      <LeftSideNav  onClose={handleDrawerClose} isOpen={open} />
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Typography paragraph>
+        {/* <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div> */}
+        <Box>{children}</Box>
+        
+        {/* <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Rhoncus
           dolor purus non enim praesent elementum facilisis leo vel. Risus at
@@ -39,7 +44,7 @@ export default function MiniDrawer({
           vivamus at augue. At augue eget arcu dictum varius duis at consectetur
           lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa sapien
           faucibus et molestie ac.
-        </Typography>
+        </Typography> */}
         {/* <Typography paragraph>
           Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
           ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar

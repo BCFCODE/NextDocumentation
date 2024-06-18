@@ -2,7 +2,11 @@
 import * as React from 'react';
 import MiniDrawer from '.';
 
-export default function MiniDrawerClient() {
+interface Props {
+  children: React.ReactNode;
+}
+
+export default function MiniDrawerClient({ children }: Props) {
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -15,5 +19,5 @@ export default function MiniDrawerClient() {
 
   const miniDrawerProps = { open, handleDrawerClose, handleDrawerOpen };
 
-  return <MiniDrawer {...miniDrawerProps} />;
+  return <MiniDrawer {...miniDrawerProps}>{children}</MiniDrawer>;
 }

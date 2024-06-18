@@ -18,7 +18,7 @@ interface Props {
 const LeftSideNav = ({ isOpen, onClose }: Props) => {
   const theme = useTheme();
   const signOutButtonProps = { text: 'Sign Out', Icon: LockIcon, isOpen };
-
+  
   return (
     <Drawer variant="permanent" open={isOpen}>
       <DrawerHeader>
