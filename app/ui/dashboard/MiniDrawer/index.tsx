@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Typography from '@mui/material/Typography';
-import { TopAppBar } from '../AppBar/TopAppBar';
+import { TopAppBar } from '../TopAppBar';
 import { LeftSideNav } from '../LeftSideNav';
 import DrawerHeader from '../common/DrawerHeader';
 

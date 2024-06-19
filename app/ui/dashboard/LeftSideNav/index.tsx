@@ -9,7 +9,7 @@ import NavLinks from './NavLinks';
 import Drawer from '../common/Drawer';
 import LockIcon from '@mui/icons-material/Lock';
 import LinkButton from './LinkButton';
-import TopLeftLogo from '../AppBar/TopLeftLogo';
+import TopLeftLogo from '../TopAppBar/TopLeftLogo';
 
 interface Props {
   isOpen: boolean;

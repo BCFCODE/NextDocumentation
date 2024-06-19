@@ -4,13 +4,24 @@ import Image from 'next/image';
 import { lusitana } from '@/app/ui/fonts';
 import { LatestInvoice } from '@/app/lib/definitions';
 import { fetchLatestInvoices } from '@/app/lib/data';
+import { Box, Typography } from '@mui/material';
 
 export default async function LatestInvoices() {
   const latestInvoices = await fetchLatestInvoices();
   return (
-    <div className="flex w-full flex-col md:col-span-4">
+    // <div className="flex w-full flex-col md:col-span-4">
+    <Box
+      sx={{
+        display: 'flex',
+        width: '100%',
+        flexDirection: 'column',
+        gridColumn: { md: 'span 4' },
+      }}
+    >
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+        {/* <Typography className={`${lusitana.className}`} sx={{marginBottom: 4}}> */}
         Latest Invoices
+        {/* </Typography> */}
       </h2>
       <div className="flex grow flex-col justify-between rounded-xl bg-gray-50 p-4">
         {/* NOTE: comment in this code when you get to this point in the course */}
@@ -58,6 +69,7 @@ export default async function LatestInvoices() {
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
         </div>
       </div>
-    </div>
+    </Box>
+    // </div>
   );
 }
