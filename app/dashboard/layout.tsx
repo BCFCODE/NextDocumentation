@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       sx={
         {
           // display: 'flex',
-          // height: '100vh',
+          // height: '100%',
           // flexDirection: { xs: 'column', md: 'row', overflow: { md: 'hidden' } },
         }
       }

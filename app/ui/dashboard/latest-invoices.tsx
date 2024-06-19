@@ -9,15 +9,15 @@ import { Box, Typography } from '@mui/material';
 export default async function LatestInvoices() {
   const latestInvoices = await fetchLatestInvoices();
   return (
-    // <div className="flex w-full flex-col md:col-span-4">
-    <Box
+    <div className="flex w-full flex-col md:col-span-4">
+     {/* <Box
       sx={{
         display: 'flex',
         width: '100%',
         flexDirection: 'column',
         gridColumn: { md: 'span 4' },
       }}
-    >
+    ></Box> */}
       <h2 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         {/* <Typography className={`${lusitana.className}`} sx={{marginBottom: 4}}> */}
         Latest Invoices
@@ -69,7 +69,7 @@ export default async function LatestInvoices() {
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
         </div>
       </div>
-    </Box>
-    // </div>
+    
+   </div>
   );
 }
