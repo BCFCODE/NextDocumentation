@@ -10,7 +10,7 @@ export default async function LatestInvoices() {
   const latestInvoices = await fetchLatestInvoices();
   return (
     <div className="flex w-full flex-col md:col-span-4">
-     {/* <Box
+      {/* <Box
       sx={{
         display: 'flex',
         width: '100%',
@@ -69,7 +69,6 @@ export default async function LatestInvoices() {
           <h3 className="ml-2 text-sm text-gray-500 ">Updated just now</h3>
         </div>
       </div>
-    
-   </div>
+    </div>
   );
 }
