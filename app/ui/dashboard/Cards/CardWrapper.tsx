@@ -1,8 +1,5 @@
-
-
 import { fetchCardData } from '@/app/lib/data';
 import BasicCard from './Card';
-
 
 export default async function CardWrapper() {
   const {
