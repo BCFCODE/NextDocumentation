@@ -5,7 +5,7 @@ import {
   InboxIcon,
 } from '@heroicons/react/24/outline';
 import * as React from 'react';
-import { lusitana } from '@/app/ui/fonts';
+// import { lusitana } from '@/app/ui/fonts';
 import {
   Card,
   CardContent,
@@ -18,8 +18,8 @@ import {
 
 interface Props {
   title?: string;
-  value: number | string;
-  type: 'invoices' | 'customers' | 'pending' | 'collected';
+  value?: number | string;
+  type?: 'invoices' | 'customers' | 'pending' | 'collected';
   subtitle?: string;
   action?: JSX.Element | any;
   footer?: JSX.Element;
@@ -37,15 +37,6 @@ const iconMap = {
   invoices: InboxIcon,
 };
 
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}
-  >
-    •
-  </Box>
-);
-
 export default function DashboardCard({
   title,
   value,
@@ -59,10 +50,10 @@ export default function DashboardCard({
   middleContent,
   subtitle,
 }: Props) {
-  const Icon = iconMap[type];
+  const Icon = type ? iconMap[type] : null;
 
   return (
-    <Card sx={{ padding: 0 }} elevation={9} variant={undefined}>
+    <Card sx={{ padding: 0 }} elevation={10} variant={undefined}>
       {cardHeading ? (
         <CardContent>
           <Typography variant="h5">{headTitle}</Typography>
@@ -95,7 +86,6 @@ export default function DashboardCard({
               {value}
             </Stack>
           ) : null}
-
           {children}
         </CardContent>
       )}
@@ -108,4 +98,3 @@ export default function DashboardCard({
     </Card>
   );
 }
-
